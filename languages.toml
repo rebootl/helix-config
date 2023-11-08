@@ -1,0 +1,75 @@
+# use-grammars = { only = [ "less" ] }
+
+[language-server.copilot]
+command = "copilot"
+args = ["--stdio"]
+
+# [[language]]
+# name = "*"
+# language-servers = [ "copilot"]
+
+[[language]]
+name = "rust"
+language-servers = ["rust-analyzer", "copilot"]
+
+[[language]]
+name = "python"
+language-servers = [ "pylsp", "copilot" ]
+
+[[language]]
+name = "c"
+language-servers = [ "clangd", "copilot" ]
+# file-types = ["c"] # TODO: ["h"]
+file-types = ["c", "h"]
+
+[[language]]
+name = "javascript"
+language-servers = [ "typescript-language-server", "copilot" ]
+
+[[language]]
+name = "typescript"
+language-servers = [ "typescript-language-server", "copilot" ]
+
+[[language]]
+name = "css"
+language-servers = [ "vscode-css-language-server", "copilot" ]
+
+[[language]]
+name = "html"
+auto-format = false
+language-servers = [ "vscode-html-language-server", "copilot" ]
+
+[[language]]
+name = "bash"
+language-servers = [ "bash-language-server" , "copilot" ]
+
+[[language]]
+name = "svelte"
+language-servers = [ "svelteserver", "copilot" ]
+
+[[language]]
+name = "perl"
+language-servers = [ "perlnavigator", "copilot" ]
+
+[[language]]
+name = "markdown"
+language-servers = [ "marksman", "copilot" ]
+
+# [[language]]
+# name = "less"
+# scope = "source.less"
+# injection-regex = "less"
+# file-types = ["less"]
+# roots = []
+# language-servers = [ "vscode-css-language-server" ]
+# auto-format = false
+# indent = { tab-width = 2, unit = "  " }
+
+# [[grammar]]
+# name = "less"
+# source = { git = "https://github.com/rhino1998/tree-sitter-less", rev = "2bd739e106a3485bca210cf7b6d25ba09fd10dff" }
+
+[[language]]
+name = "scss"
+file-types = ["scss", "less"]
+auto-format = false

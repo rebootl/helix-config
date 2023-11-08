@@ -1,0 +1,56 @@
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[keys.insert]
+"C-up" = "show_or_next_copilot_completion"
+# "C-[" = "hide_or_prev_copilot_completion"
+"C-space" = "apply_copilot_completion"
+
+[keys.normal]
+"C-s" = ":w"
+# space = { foo = "bar" }
+"C-t" = [
+  "select_all",
+  # Delete trailing whitespace from end of each line
+  ":pipe sed 's/[ \t]*$//'",
+  # Delete trailing blank lines (including whitespace) from end of the buffer
+  ":pipe awk '/^\\s*$/ {b=b $0 \"\\n\"; next;} {printf \"%s\",b; b=\"\"; print;}'",
+  "collapse_selection",
+  # "jump_backward",
+  # "commit_undo_checkpoint",
+  # ":write",
+]
+
+# }
+# -> command = "git", args = ["stripspace"] }
+"C-left" = ":bp"
+"C-right" = ":bn"
+"C-x" = ":bc"
+# -> "S--" decrement
+"C-j" = "save_selection"
+# "C-r" = ":reload"
+"C-y" = "decrement"
+# "C-," = "increment"
+"A-u" = "switch_to_uppercase"
+"A-l" = "switch_to_lowercase"
+
+[editor.gutters.line-numbers]
+min-width = 0
+
+# [editor.indent-guides]
+# render = true
+# character = "▏" # Some characters that work well: "▏", "┆", "┊", "⸽"
+# skip-levels = 1
+
+# [editor.whitespace.render]
+# space = "all"
+# tab = "all"
+# newline = "none"
+
+[editor]
+bufferline = "multiple"
