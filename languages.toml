@@ -4,56 +4,73 @@
 command = "copilot"
 args = ["--stdio"]
 
+[language-server.gpt]
+command = "/home/cem/Setups/helix-gpt-run.sh"
+# args = ["--logFile", "/home/cem/.cache/helix/gpt.log"]
+
+[language-server.ollama]
+command = "/home/cem/Setups/helix-ollama-run.sh"
+# args = ["--logFile", "/home/cem/.cache/helix/gpt.log"]
+
+# [language-server.lsp-ollama]
+# command = "bun"
+# args = ["run", "/home/cem/Setups/lsp-ollama/src/index.ts", "--stdio"]
 # [[language]]
 # name = "*"
 # language-servers = [ "copilot"]
 
 [[language]]
 name = "rust"
-language-servers = ["rust-analyzer", "copilot"]
+language-servers = ["rust-analyzer", "gpt"]
 
 [[language]]
 name = "python"
-language-servers = [ "pylsp", "copilot" ]
+language-servers = [ "pylsp", "gpt" ]
 
 [[language]]
 name = "c"
-language-servers = [ "clangd", "copilot" ]
+language-servers = [ "gpt" ]
+# language-servers = [ "clangd", "gpt" ]
 # file-types = ["c"] # TODO: ["h"]
 file-types = ["c", "h"]
 
 [[language]]
 name = "javascript"
-language-servers = [ "typescript-language-server", "copilot" ]
+# language-servers = [ "typescript-language-server", "gpt" ]
+language-servers = [ "typescript-language-server", "gpt" ]
 
 [[language]]
 name = "typescript"
-language-servers = [ "typescript-language-server", "copilot" ]
+# language-servers = [ "typescript-language-server", "gpt" ]
+language-servers = [ "typescript-language-server", "gpt" ]
 
 [[language]]
 name = "css"
-language-servers = [ "vscode-css-language-server", "copilot" ]
+language-servers = [ "vscode-css-language-server", "gpt" ]
 
 [[language]]
 name = "html"
 auto-format = false
-language-servers = [ "vscode-html-language-server", "copilot" ]
+language-servers = [ "vscode-html-language-server", "gpt" ]
 
 [[language]]
 name = "bash"
-language-servers = [ "bash-language-server" , "copilot" ]
+language-servers = [ "bash-language-server" , "gpt" ]
 
 [[language]]
 name = "svelte"
-language-servers = [ "svelteserver", "copilot" ]
+# language-servers = [ "gpt" ]
+language-servers = [ "svelteserver", "gpt" ]
+file-types = [ "svelte" ]
 
 [[language]]
 name = "perl"
-language-servers = [ "perlnavigator", "copilot" ]
+file-types = ["pl", "pm"]
+language-servers = [ "gpt", "perlnavigator" ]
 
 [[language]]
 name = "markdown"
-language-servers = [ "marksman", "copilot" ]
+language-servers = [ "marksman", "gpt" ]
 
 # [[language]]
 # name = "less"
@@ -73,3 +90,4 @@ language-servers = [ "marksman", "copilot" ]
 name = "scss"
 file-types = ["scss", "less"]
 auto-format = false
+language-servers = [ "gpt" ]

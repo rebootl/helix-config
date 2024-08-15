@@ -1,3 +1,5 @@
+theme = "tokyonight-my"
+
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
@@ -7,12 +9,14 @@ select = "underline"
 hidden = false
 
 [keys.insert]
-"C-up" = "show_or_next_copilot_completion"
+# "C-up" = "show_or_next_copilot_completion"
 # "C-[" = "hide_or_prev_copilot_completion"
-"C-space" = "apply_copilot_completion"
+# "C-space" = "apply_copilot_completion"
 
 [keys.normal]
 "C-s" = ":w"
+"K" = "half_page_up"
+"J" = "half_page_down"
 # space = { foo = "bar" }
 "C-t" = [
   "select_all",
@@ -38,6 +42,8 @@ hidden = false
 # "C-," = "increment"
 "A-u" = "switch_to_uppercase"
 "A-l" = "switch_to_lowercase"
+"0" = "goto_line_start"
+"$" = "goto_line_end"
 
 [editor.gutters.line-numbers]
 min-width = 0

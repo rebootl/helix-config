@@ -1,0 +1,51 @@
+[language-server.copilot]
+command = "copilot"
+args = ["--stdio"]
+
+[[language]]
+name = "*"
+language-servers = [ "copilot"]
+
+[[language]]
+name = "rust"
+language-servers = ["rust-analyzer", "copilot"]
+
+[[language]]
+name = "python"
+language-servers = [ "pylsp", "copilot" ]
+
+[[language]]
+name = "c"
+language-servers = [ "clangd", "copilot" ]
+
+[[language]]
+name = "javascript"
+language-servers = [ "typescript-language-server", "copilot" ]
+
+[[language]]
+name = "typescript"
+language-servers = [ "typescript-language-server", "copilot" ]
+
+[[language]]
+name = "css"
+language-servers = [ "vscode-css-language-server", "copilot" ]
+
+[[language]]
+name = "html"
+language-servers = [ "vscode-html-language-server", "copilot" ]
+
+[[language]]
+name = "bash"
+language-servers = [ "bash-language-server" , "copilot" ]
+
+[[language]]
+name = "svelte"
+language-servers = [ "svelteserver", "copilot" ]
+
+[[language]]
+name = "perl"
+language-servers = [ "perlnavigator", "copilot" ]
+
+[[language]]
+name = "markdown"
+language-servers = [ "marksman", "copilot" ]
